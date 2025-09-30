@@ -2,7 +2,8 @@
 services:
   universal-downloader:
     restart: unless-stopped
-    build: .
+    image: ghcr.io/longphamdev/universaldownloader:latest
+    # build: .  # Uncomment this line if you want to build locally instead
     container_name: universal-downloader-app
     ports:
       - "1234:3000"

@@ -35,8 +35,41 @@ Download media from LinkedIn,Threads, Reddit, Facebook, Instagram, TikTok, YouTu
 
 ## Installation
 
+### Option 1: Using Docker (Recommended)
+
+#### Using the published image from GitHub Container Registry:
+
 ```bash
-git clone https://github.com/milancodess/universalDownloader.git
+# Pull and run the latest image
+docker run -p 3000:3000 ghcr.io/longphamdev/universaldownloader:latest
+```
+
+#### Using docker-compose:
+
+```bash
+# Clone the repository
+git clone https://github.com/longphamdev/universalDownloader.git
+cd universalDownloader
+
+# Run with docker-compose
+docker-compose up -d
+```
+
+#### Building locally:
+
+```bash
+git clone https://github.com/longphamdev/universalDownloader.git
+cd universalDownloader
+
+# Build and run locally
+docker build -t universal-downloader .
+docker run -p 3000:3000 universal-downloader
+```
+
+### Option 2: Manual Installation
+
+```bash
+git clone https://github.com/longphamdev/universalDownloader.git
 cd universalDownloader
 npm install
 ```
